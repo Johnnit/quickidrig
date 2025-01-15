@@ -1,0 +1,248 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  
+}
+:root{
+  --main-color: rgb(16,63,77);
+  --text-color: white;
+  --secondary-color: rgb(13, 19, 20, 2);
+  --accent-color: limegreen;
+}
+body {
+  width: 100%;
+    font-size: 15pt;
+    background: linear-gradient(320deg, var(--secondary-color), var(--main-color));
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(100px);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  padding: 5vw;
+  z-index: 100;
+}
+header h2{
+  font-family: cursive;
+  border-bottom: 2px double var(--accent-color);
+}
+header h2 span{
+  font-family: cursive;
+  color: limegreen;
+  border-bottom: 2px double var(--text-color);
+}
+header span:nth-child(2){
+  border: 2px solid var(--accent-color);
+  padding: 5px 8px;
+  border-radius: 20px;
+  
+}
+header span:nth-child(2):hover{
+  background: var(--accent-color);
+  border: 2px double var(--text-color);
+}
+main{
+  padding : 5vw;
+}
+main .head{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+main .head h1{
+  font-size: clamp(40px, 20vw, 70px);
+  text-align: center;
+}
+main .head p{
+  margin-top: 30px;
+  color: var(--text-color);
+  text-shadow: 1px 1px 0.9px rgba(192, 192, 202, 1);
+ font-size: clamp(15px, 10vw, 30px);
+}
+main button{
+  margin-top: 30px;
+  width: fit-content;
+  height: 50px;
+  padding: 0 20px;
+  background: var(--accent-color);
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  
+}
+.up{
+  width: fit-content;
+  position: sticky;
+  display: flex;
+  align-self: end;
+  bottom: 20%;
+  right: 0;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  font-size: 25px;
+  display: none;
+}
+footer{
+  backdrop-filter: blur(10px);
+  background: linear-gradient(320deg, var(--main-color), var(--secondary-color), var(--main-color));
+  padding: 5vw;
+  text-align: center;
+}
+footer cite span{
+  color: var(--accent-color);
+}
+.socials{
+  margin: 20px 0;
+}
+ion-icon{
+  color: var(--secondary-color);
+  padding: 5px;
+  background: var(--accent-color);
+  border-radius: 50%;
+}
+
+/* groups */
+form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+form fieldset{
+  padding: 5vw;
+  box-shadow: 1px 1px 2px var(--main-color),
+            -1px -1px 2px var(--main-color),
+            -1px -1px 1px var(--text-color),
+            1px 1px 1px var(--text-color);
+  border: none;
+}
+.grps{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+fieldset legend {
+  background: var(--accent-color);
+  color: var(--text-color);
+  padding: 5px 10px;
+}
+.grp{
+  margin-top: 10px
+}
+ .grp input,
+ .grp textarea,
+.grps .grp select{
+  width: 100%;
+  background: transparent;
+  color: white;
+  border: 2px solid green;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 18px;
+  outline: none;
+  resize: none;
+}
+
+fieldset button{
+  background: var(--accent-color);
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px 15px;
+}
+fieldset .btnWrap{
+  display: flex;
+  justify-content: end;
+}
+fieldset .btnWrap button{
+  height: fit-content;
+  width: fit-content;
+  padding: 10px 50px;
+}
+fieldset button:hover{
+  opacity: 0.8;
+  border: 3px double var(--text-color);
+  outline: none;
+}
+.detailWrap{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.detailWrap .details{
+  width: 100%;
+  box-shadow: 1px 1px 2px var(--main-color),
+            -1px -1px 2px var(--main-color),
+            -1px -1px 1px var(--text-color),
+            1px 1px 1px var(--text-color);
+  padding: 5vw 0;
+  
+}
+.detailWrap .details .profile{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.detailWrap .details .profile img{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid var(--main-color);
+  padding: 5px;
+}
+.detailWrap .details .profile img:before{
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 20vh;
+  background: whitesmoke;
+  top: 0;
+}
+.idDetail{
+  margin-top: 20px;
+  font-size: 18px;
+}
+.idDetail .idList{
+  padding: 10px 10px;
+  box-shadow: 1px 1px 2px var(--main-color),
+            -1px -1px 2px var(--main-color),
+            -1px -1px 1px var(--text-color),
+            1px 1px 1px var(--text-color);
+}
+
+.contact{
+  margin-top: 30px;
+  
+}
+.contact .cont form{
+  margin-top: 30px;
+}
+.contact h2{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 30px;
+  
+}
