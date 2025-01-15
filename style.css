@@ -125,7 +125,7 @@ form{
   padding-bottom: 20px;
 }
 form fieldset{
-  width:520px;
+  width:550px;
   padding: 5vw;
   box-shadow: 1px 1px 2px var(--main-color),
             -1px -1px 2px var(--main-color),
