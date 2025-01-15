@@ -86,17 +86,19 @@ main button{
   
 }
 .up{
-  width: fit-content;
+  width: 100%;
   position: sticky;
-  display: flex;
-  align-self: end;
-  bottom: 20%;
-  right: 0;
-  padding: 10px;
+  bottom: 30%;
+  display: none;
+}
+.up ion-icon{
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: var(--accent-color);
   font-size: 25px;
-  display: none;
+  float: right;
+  margin-right: 20px;
 }
 footer{
   backdrop-filter: blur(10px);
