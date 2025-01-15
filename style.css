@@ -147,7 +147,7 @@ fieldset legend {
 }
  .grp input,
  .grp textarea,
-.grps .grp select{
+ .grp select{
   width: 100%;
   background: transparent;
   color: white;
@@ -189,7 +189,7 @@ fieldset button:hover{
   justify-content: center;
 }
 .detailWrap .details{
-  width: 100%;
+  width: 550px;
   box-shadow: 1px 1px 2px var(--main-color),
             -1px -1px 2px var(--main-color),
             -1px -1px 1px var(--text-color),
