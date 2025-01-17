@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Ajala John( Johnnykay)">
+  <meta name="keywords" content="Fake id, Quick IDrig">
+    <meta name="description" content="Quick IDrig is a website built with the aim of helping people generate different user identity for different locations.">
+    
+  <title>Quick IDrig</title>
+  
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+ <header>
+
+   <h2>Quick <span>IDrig</span></h2>
+   <span class="span">Contact</span>
+ </header>
+ <main>
+   <section class="head">
+     
+   <h1>Quick IDrig for identity generation purpose.</h1>
+   <p>Quick IDrig is a website built with the aim of helping people generate different user identity for different locations.</p>
+   <button type="submit" onclick="fake()">Give it a try</button>
+   </section>
+   <section class="use">
+     <h1>It's a <span>free-to-use</span> tool made by <span>Johnnykay</span> for <span>users</span> </h1>
+     <p>
+     Quick IDrig is a cutting-edge online platform designed to generate realistic and anonymous user IDs for testing, development, and research purposes. Our innovative tool helps professionals and individuals create fake user IDs that mimic real-world data, ensuring more accurate and reliable testing outcomes.</p>
+   </section>
+   <section class="lang">
+     <strong>_locale </strong><br />
+     <span style="font-weight: 600;">Default: AU(Australia)</span>
+     <p>This means that the default language or country is Australia if no language or country is selected.</p>
+     <p>The example returns people with Australian details.</p>
+     <p style="font-weight: 600;"> Here's a list of available locales</p>
+     <div class="langList">
+     
+     </div>
+   </section>
+   <section class="contact" id="contact">
+     <h2>Reach out to Us</h2>
+     <div class="cont">
+       
+     <form action="" method="post">
+       <fieldset>
+         <legend>Contact us form</legend>
+         <div class="grps">
+  
+         <div class="grp">
+           <label for="name">Full Name</label>
+           <input type="text" name="name" id="name" />
+         </div>
+           <div class="grp">
+           <label for="mail">Email address</label>
+           <input type="email" name="mail" id="mail" />
+         </div>
+         </div>
+         
+         <div class="grp">
+           <label for="phone">Phone number</label>
+           <input type="tel" name="phone" id="phone"/>
+         </div>
+         
+         <div class="grp">
+           <label for="message">Message</label>
+           <textarea name="msg" id=msg rows="8" cols="40"></textarea>
+         </div>
+         <div class="btnWrap">
+           <button type="submit">Send</button>
+         </div>
+       </fieldset>
+     </form>
+
+     
+     </div>
+     
+   </section>
+ </main>
+ <div class="up">
+  <ion-icon name="chevron-up-outline"></ion-icon>
+ </div>
+ <footer>
+   
+ <cite> Made to generate fake user ID by <span>Ajala John</span></cite>
+ 
+ <div class="socials">
+  
+ <ion-icon name="logo-facebook"></ion-icon>
+ <ion-icon name="mail-outline"></ion-icon>
+  <ion-icon name="logo-linkedin"></ion-icon>
+   <ion-icon name="logo-whatsapp"></ion-icon>
+
+</div>
+ </footer>
+
+  <script src="main.js"></script>
+  <script>
+    window.onload = ()=>{
+        for(let nat in langs){
+    
+    document.querySelector('.langList').innerHTML += 
+     `<span>${nat}(${langs[nat]})</span>`;
+  }
+    }
+  </script>
+</body>
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
