@@ -273,7 +273,7 @@ fieldset button:hover{
   padding: 0;
 }
 .langList span{
-  font-size: clamp(4px, 5vw, 16px);
+  font-size: clamp(4px, 20vw, 14px);
   color : var(--accent-color);
 }
 
