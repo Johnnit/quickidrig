@@ -2,7 +2,7 @@ window.onscroll = () => {
   document.querySelector('.up').style.display = 'block';
 }
 document.querySelector('header .span').onclick = function(){
-  location.href = '#contact';
+  location.href = 'index.html?#contact';
 }
 
 document.querySelector('.up').onclick=()=>{
