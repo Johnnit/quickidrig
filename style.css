@@ -132,6 +132,7 @@ form{
   
 }
 form fieldset{
+  max-width:500px;
   padding: 5vw;
   box-shadow: 1px 1px 2px var(--main-color),
             -1px -1px 2px var(--main-color),
@@ -197,7 +198,7 @@ fieldset button:hover{
   position: relative;
 }
 .detailWrap .details{
-  width: 550px;
+  max-width:500px;
   box-shadow: 1px 1px 2px var(--main-color),
             -1px -1px 2px var(--main-color),
             -1px -1px 1px var(--text-color),
