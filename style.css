@@ -280,14 +280,10 @@ fieldset button:hover{
 
 .contact{
   margin-top: 30px;
-  width: 500px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+    }
 .contact .cont form{
   margin-top: 30px;
-  width: 500px;
+  
 }
 .contact h2{
   text-align: center;
