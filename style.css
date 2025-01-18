@@ -283,6 +283,7 @@ fieldset button:hover{
   width: 500px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .contact .cont form{
   margin-top: 30px;
