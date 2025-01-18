@@ -1,7 +1,7 @@
 window.onscroll = () => {
   document.querySelector('.up').style.display = 'block';
 }
-document.querySelector('header .span').onclick = ()=>{
+document.querySelector('header .span').onclick = function(){
   location.href = '#contact';
 }
 
@@ -54,9 +54,6 @@ document.querySelector('#check').addEventListener('click', (e)=>{
 
   e.preventDefault();
   
-  if(navigator.offline){
-    alert('offline')
-  }
   //generate random value to get email provider
   let j = Math.floor(Math.random()*mailArray.length);
   //to select the random email provider
@@ -67,7 +64,6 @@ document.querySelector('#check').addEventListener('click', (e)=>{
 fetch(`https://randomuser.me/api/?nat=${contry.value}&gender=${gender.value}&name.first=john`)
 .then((res)=> res.json())
 .then((data)=>{
-  console.log(data);
   let name = data.results[0].name.first + ' ' + data.results[0].name.last;
   let title = data.results[0].name.title;
   let email = data.results[0].email;
