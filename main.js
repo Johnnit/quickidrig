@@ -58,7 +58,7 @@ else {
  
   document.querySelector('.details').innerHTML = `
      <div class="profile">
-     <img src="https://kqd6g0tt.tinifycdn.com/${pics}" alt="image" id="image">
+     <img src="${pics}" alt="image" id="image">
      <div class="idList">
        <b>Name: </b>
        <span class="name">${name}</span>
