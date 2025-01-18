@@ -17,19 +17,61 @@ let gender = document.querySelector('#gender');
 let contry = document.querySelector('#country');
 let age = document.querySelector('#age');
 let mailArray = ["gmail", 'outlook', 'yahoo'];
-let shufMail= Math.floor(Math.random()*mailArray.length);
-document.querySelector('#check').onclick = (e)=>{
+let shufMail;
+
+let langs =  {
+  'AU': 'Australia',
+  'BR': 'Brazil',
+  'CA': 'Canada',
+  'CH': 'Switzerland',
+  'DE': 'Germany',
+  'DK': 'Denmark',
+  'ES': 'Spain',
+  'FI': 'Finland',
+  'FR': 'France',
+  'GB': 'United Kingdom',
+  'IE': 'ireland',
+  'IN': 'India',
+  'IR': 'Iran',
+  'MX': 'Mexico',
+  'NL': 'Netherlands',
+  'NO': 'Norway',
+  'NZ': 'New Zealand',
+  'RS': 'Serbia',
+  'TR': 'Turkey', 
+  'UA': 'Ukraine',
+  'US': 'United States'
+}
+let genders= {
+  'random': 'Random',
+  'male': 'Male',
+  'female': 'Female'
+}
+
+
+//generate and display user data
+document.querySelector('#check').addEventListener('click', (e)=>{
+
   e.preventDefault();
   
-  
-fetch(`https://randomuser.me/api/?nat=${contry.value}&gender=${gender.value}`)
+  if(navigator.offline){
+    alert('offline')
+  }
+  //generate random value to get email provider
+  let j = Math.floor(Math.random()*mailArray.length);
+  //to select the random email provider
+  for(let i = 0; i < mailArray.length; i++){
+  shufMail = mailArray[j];
+}
+  //fetch user details from randomuser API 
+fetch(`https://randomuser.me/api/?nat=${contry.value}&gender=${gender.value}&name.first=john`)
 .then((res)=> res.json())
 .then((data)=>{
   console.log(data);
   let name = data.results[0].name.first + ' ' + data.results[0].name.last;
   let title = data.results[0].name.title;
   let email = data.results[0].email;
-  let mail = email.replace('example', 'gmail');
+  let mail = email.replace('example', shufMail);
   let gender = data.results[0].gender;
   let phone = data.results[0].phone;
   let nation = data.results[0].nat;
@@ -45,6 +87,8 @@ fetch(`https://randomuser.me/api/?nat=${contry.value}&gender=${gender.value}`)
  let snum = data.results[0].location.street.number;
  let ssn;
  let ssnval;
+ 
+ //check if ssn is available in the country 
  if (data.results[0].id.name !== ' ' && data.results[0].id.value !== null) {
   ssn = data.results[0].id.name;
 ssnval = data.results[0].id.value;
@@ -55,9 +99,10 @@ else {
 }
  let tmz = data.results[0].location.timezone.description;
  let tmzoff = data.results[0].location.timezone.offset;
- 
+ //append details to show in the clientside
   document.querySelector('.details').innerHTML = `
      <div class="profile">
+     <ion-icon name="reload-circle-outline" id="check"></ion-icon>
      <img src="${pics}" alt="image" id="image">
      <div class="idList">
        <b>Name: </b>
@@ -117,10 +162,10 @@ else {
 
   `;
   location.href='#detailWrap';
-  document.querySelector('.detailWrap').style.top = '300px';
 })
 .catch(err=>{
   console.log(err);
 })
 
-}
+})
+
