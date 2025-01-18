@@ -130,6 +130,10 @@
  </footer>
 
 </body>
+
+<script src="main.js"></script>
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script>
   window.onload=()=>{
   for(let nat in langs){
@@ -141,9 +145,5 @@
     document.querySelector('select#gender').innerHTML += 
      `<option value="${sex}">${genders[sex]}</option>`;
   }
-}
-</script>
-<script src="main.js"></script>
- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ </script>
 </html>
