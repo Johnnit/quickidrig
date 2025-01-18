@@ -49,19 +49,6 @@ let genders= {
 }
 
 
-
-  window.onload=()=>{
-  for(let nat in langs){
-    
-    document.querySelector('select#country').innerHTML += 
-     `<option value="${nat}">${langs[nat]}</option>`;
-  }
-  for(let sex in genders){
-    document.querySelector('select#gender').innerHTML += 
-     `<option value="${sex}">${genders[sex]}</option>`;
-  }
-  
-
 //generate and display user data
 document.querySelector('#check').addEventListener('click', (e)=>{
 
