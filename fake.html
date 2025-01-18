@@ -14,7 +14,7 @@
    <header>
 
    <h2>Quick <span>IDrig</span></h2>
-  <!-- <span class="span">Contact</span>-->
+  <span class="span">Contact</span>
  </header>
  <main class="fakeWrapper" id="top">
     <form method="get">
@@ -132,8 +132,9 @@
   <script src="main.js"></script>
   <script>
   window.onload=()=>{
+    alert("ahhhh");
   for(let nat in langs){
-    
+    alert(langs);
     document.querySelector('select#country').innerHTML += 
      `<option value="${nat}">${langs[nat]}</option>`;
   }
