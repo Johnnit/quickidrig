@@ -65,7 +65,7 @@ main .head{
 }
 main .head h1,
 .use h1{
-  font-size: clamp(40px, 20vw, 70px);
+  font-size: clamp(40px, 20vw, 50px);
   text-align: center;
 }
 main .head p{
